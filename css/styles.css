@@ -7,6 +7,7 @@
     --cloud:#F4F4FD;
     --cornflower: #E7E9FC;
     --white: #ffffff;
+    --green: #31D0AA;
 }
 body{
     background: var(--white);
@@ -31,7 +32,7 @@ img{
     font-size: 18px;
     line-height: 1.17;
     font-weight: 800;
-    letter-spacing: 0.03em
+    letter-spacing: 0.02em
 }
 .link{
     text-decoration: none;
@@ -61,23 +62,9 @@ img{
     transition-property: color;
     transition-duration: 1s;
 }
-.site-nav .item::after{
-    display: block;
-    content: '';
-    width: 100%;
-    height: 4px;
-    background-color: var(--ocean);
-    border-radius: 4px;
-}
 .site-nav .link:hover,
 .site-nav .link:focus{
-    color: var(--ocean);
-    border-bottom: 4px solid var(--ocean);
-    border-top-right-radius: 2px;
-    border-top-right-radius: 2px;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
-    
+    color: var(--ocean);   
 }
 .address .link:hover,
 .address .link:focus{
@@ -91,6 +78,21 @@ img{
     letter-spacing: 0.02em;
     transition-property: color;
     transition-duration: 1s;
+}
+.current{
+    position: relative;
+
+}
+.current::after{
+    display: block;
+    left: 0;
+    position: absolute;
+    bottom: -1px;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--ocean);
+    border-radius: 2px;
 }
 .address{
     font-style: normal;
@@ -138,7 +140,7 @@ img{
     color: var(--white);
     background-color: var(--ocean);
     border: 1px solid transparent;
-    
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
 }
 .container.center{
     display: flex;
@@ -192,6 +194,7 @@ header a{
 }
 .crew .person{
     width: calc((100% - 3 * 24px) / 4);
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .person-padding{
     text-align: center;
@@ -250,11 +253,18 @@ header a{
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 4px;
+}
+.customers .item:hover{
+    border: 1px solid var(--ocean, #404BBF);
+}
+.customers .item:hover .icon{
+    fill: var(--ocean, #404BBF);
 }
 .customers  .icon{
     fill: var(--light-slate);
 }
-.icon-wrap{
+.icon-wrap, .icon-wrap-footer{
     background-color: var(--iris);
     width: 40px;
     height: 40px;
@@ -262,6 +272,12 @@ header a{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.icon-wrap:hover{
+    background-color: var(--ocean);
+}
+.icon-wrap-footer:hover{
+    background-color: var(--green);
 }
 .flex-social-icon{
     display: flex;
@@ -277,7 +293,7 @@ header a{
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
-    letter-spacing: 0.32px;
+    letter-spacing: 0.02em;
     margin-bottom: 16px;
 }
 /* studio styles */
@@ -378,11 +394,18 @@ header a{
     flex-wrap: wrap;
     gap: 24px;
     row-gap: 48px;
-    position: relative;
+    /* position: relative;
     overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
 }
 .portfolio-block{
     width: calc((100% - 48px) / 3);
+}
+.portfolio-block:hover{
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .portfolio-block .wrapper{
     padding: 32px 16px;
@@ -411,20 +434,37 @@ header a{
     padding-bottom: 120px;
 }
 
-.current{
+/* .current{
     
-}
+} */
 .overlay{
+    position: relative;
+    overflow: hidden;
+} 
+.overlay-text{
+    transform: translateY(100%);
     position: absolute;
-    top: 0;
-    left: 0;
+    transition: transform 250ms ease-in-out; 
+
     width: 100%;
     height: 100%;
-    transform: translateX(-100%);
+    top: 0;
+    padding: 40px 32px;
+    color: var(--cloud, #F4F4FD);
+    font-size: 16px;
+    line-height: 1.5; 
+    letter-spacing: 0.02em;
+    background-color: var(--iris);
 }
-.portfolio-block:hover .overlay {
+.link-hover:hover .overlay-text,
+.link-hover:focus .overlay-text{
+    transform: translateY(0);
+
+}
+ .portfolio-block:hover .overlay {
     transform: translateX(0);
   }
+  
 /* footer */
 .footer{
     background-color: var(--navy-blue);
