@@ -65,10 +65,14 @@ img{
 .site-nav .link:hover,
 .site-nav .link:focus{
     color: var(--ocean);   
+    transition: 250ms; 
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
 }
 .address .link:hover,
 .address .link:focus{
     color: var(--ocean);
+    transition: 250ms; 
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
 }
 
 .auth-nav a{
@@ -97,8 +101,10 @@ img{
 .address{
     font-style: normal;
 }
-.auth-nav a:hover{
+.auth-nav a:hover, .auth-nav a:focus{
     color:var(--iris);
+    transition: 250ms; 
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
 }
 .section-title{
     color: var(--navy-blue);
@@ -137,6 +143,8 @@ img{
 }
 .button:hover,
 .button:focus{
+    transition: 250ms; 
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
     color: var(--white);
     background-color: var(--ocean);
     border: 1px solid transparent;
@@ -255,11 +263,16 @@ header a{
     align-items: center;
     border-radius: 4px;
 }
-.customers .item:hover{
+.customers .item:hover, .customers .item:focus{
     border: 1px solid var(--ocean, #404BBF);
+    transition: 250ms; 
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
 }
-.customers .item:hover .icon{
+.customers .item:hover .icon,
+.customers .item:focus, .icon{
     fill: var(--ocean, #404BBF);
+    transition: 250ms; 
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
 }
 .customers  .icon{
     fill: var(--light-slate);
@@ -273,11 +286,15 @@ header a{
     justify-content: center;
     align-items: center;
 }
-.icon-wrap:hover{
+.icon-wrap:hover, .icon-wrap:focus{
     background-color: var(--ocean);
+    transition: 250ms; 
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
 }
-.icon-wrap-footer:hover{
+.icon-wrap-footer:hover, .icon-wrap-footer:focus{
     background-color: var(--green);
+    transition: 250ms; 
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
 }
 .flex-social-icon{
     display: flex;
@@ -394,17 +411,14 @@ header a{
     flex-wrap: wrap;
     gap: 24px;
     row-gap: 48px;
-    /* position: relative;
-    overflow: hidden;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
 }
 .portfolio-block{
     width: calc((100% - 48px) / 3);
 }
-.portfolio-block:hover{
+.portfolio-block:hover,
+.portfolio-block:focus{
+    transition: 250ms; 
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .portfolio-block .wrapper{
