@@ -213,6 +213,7 @@ header a{
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .crew .person{
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: calc((100% - 3 * 24px) / 4);
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
@@ -285,23 +286,21 @@ header a{
     transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
 }
 .customers .item-link{
-    width: 100%;
+    width: calc((100% - 120px) / 6);
     height: 88px;
-    padding: 15px 30px;
-    border: 1px solid var(--light-slate);
     border-radius: 4px;
     transition:  250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.customers .item-link .link-a{
+.customers .link-a{
     width: 100%;
     height: 100%;
-    
+    border: 1px solid var(--light-slate);
     color: var(--light-slate);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 4px;
-    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .customers  .icon{
     fill: var(--light-slate);
@@ -315,8 +314,9 @@ header a{
     justify-content: center;
     align-items: center;
 }
-.icon-wrap:hover, .icon-wrap:focus{
-    background-color: var(--ocean);
+.link-a:hover, 
+.link-a:focus{
+    border-color: var(--ocean);
     transition: 250ms; 
     transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
 }
@@ -329,6 +329,7 @@ header a{
     display: flex;
     justify-content: flex-start;
     gap: 16px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); ;
 }
 .team-block .flex-social-icon{
     justify-content: center;
@@ -446,14 +447,16 @@ header a{
     row-gap: 48px;
 }
 .portfolio-block{
+    display: block;
     width: calc((100% - 48px) / 3);
-    transition: box-shadow 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .portfolio-block:hover,
 .portfolio-block:focus{
     transition: 250ms; 
     transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
-    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+    transition: box-shadow 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .portfolio-block .wrapper{
     padding: 32px 16px;
@@ -476,6 +479,7 @@ header a{
 }
 .button.portfolio{
     width:fit-content;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list.main{
     padding-top: 96px;
