@@ -296,7 +296,6 @@ header a{
     width: calc((100% - 120px) / 6);
     height: 88px;
     border-radius: 4px;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers .link-a{
     width: 100%;
@@ -328,7 +327,11 @@ header a{
     transition: 250ms; 
     transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
 }
-.icon-wrap-footer:hover, .icon-wrap-footer:focus{
+.icon-wrap-footer{
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.icon-wrap-footer:hover, 
+.icon-wrap-footer:focus{
     background-color: var(--green);
     transition: 250ms; 
     transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
@@ -456,13 +459,13 @@ header a{
     row-gap: 48px;
 }
 .portfolio-block{
+    display: block;
     width: calc((100% - 48px) / 3);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
-.portfolio-block .link-hover{
-    display: block;
-    transition: box-shadow 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+.portfolio-block .link-hover:hover,
+.portfolio-block .link-hover:focus{
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .portfolio-block:hover,
 .portfolio-block:focus{
