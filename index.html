@@ -376,8 +376,13 @@
             </div>
             <form class="subscribe-form" action="">
                 <p class="title">Subscribe</p>
-                <input class="" type="email" placeholder="E-mail" required />
-                <button class="button" type="submit">Subscribe</button>
+                <input class="subscribe-form-input" type="email" placeholder="E-mail" required minlength="3"
+                    maxlength="30" />
+                <button class="subscribe-button" type="submit">Subscribe
+                    <svg class="subscribe-icon" width="24" height="24">
+                        <use href="./images/icons.svg#icon-send"></use>
+                    </svg>
+                </button>
             </form>
         </div>
     </footer>
@@ -394,7 +399,8 @@
                 <div class="review-form-wrapper">
                     <label class="text-label" for="user-name">Name</label>
                     <div class="modal-field">
-                        <input class="modal-input" type="user-name" name="user-name" id="user-name" required />
+                        <input class="modal-input" type="user-name" name="user-name" id="user-name" required
+                            minlength="3" maxlength="50" placeholder="Mark Jacobs" />
                         <svg class="modal-input-icon" width="18" height="18">
                             <use href="./images/icons.svg#icon-person"></use>
                         </svg>
@@ -402,7 +408,8 @@
 
                     <label class="text-label" for="email">Email</label>
                     <div class="modal-field">
-                        <input class="modal-input" type="email" name="email" id="email" required />
+                        <input class="modal-input" type="email" name="email" id="email" required minlength="3"
+                            maxlength="30" placeholder="marc.jacobs@gmail.com" />
                         <svg class="modal-input-icon" width="18" height="24">
                             <use href="./images/icons.svg#icon-email"></use>
                         </svg>
@@ -410,7 +417,8 @@
 
                     <label class="text-label" for="tel">Phone</label>
                     <div class="modal-field">
-                        <input class="modal-input" type="tel" name="tel" id="tel" required />
+                        <input class="modal-input" type="tel" name="tel" id="tel" required minlength="3" maxlength="12"
+                            placeholder="+380 76 34 34 666" />
                         <svg class="modal-input-icon" width="18" height="24">
                             <use href="./images/icons.svg#icon-phone"></use>
                         </svg>
@@ -419,7 +427,7 @@
                     <label class="text-label" for="comment">Comment</label>
                     <div class="modal-field">
                         <textarea class="modal-review-input" name="comment" id="comment" rows="5"
-                            placeholder="Text input"></textarea>
+                            placeholder="Text input" minlength="3" maxlength="1000"></textarea>
                     </div>
 
                     <label class="modal-label-agreement" for="agreement">
